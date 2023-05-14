@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Oracles by Angelicunt and Mel Racho</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body class="oracle">
+
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <!-- <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button> -->
+        <a class="navbar-brand" href="#">Oracles</a>
+      </div>
+      <!-- <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#">Page 1</a></li>
+          <li><a href="#">Page 2</a></li>
+          <li><a href="#">Page 3</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+          <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        </ul>
+      </div> -->
+    </div>
+  </nav>
+
+  <div class="card container">
+    <div class="button">
+      <button><a href="#" id="reveal">reveal</a></button>
+    </div>
+
+    <div id="card-container">
+      <div id="main_place"></div>
+    </div>
+
+  </div>
+
+  <script>
+    // Define an array of text cards
+    // const cards = ["Card 1", "Card 2", "Card 3", "Card 4", "Card 5"];
+    const cards = [
+      {
+        "name": "TRANCESTOR",
+        "poem": "there are people above you\rbelow you\rcall on your energetic support team - the queers in your DMS, the angels\r in your orbit, the poets on your iPod &\rrecall the trans kin\rthat used the medicine of magic, waters, & breath to hold you up\rthose who name you, again & again, relentlessly\rproud of your rest\rproud of your stages \rproud of your dreams\rgo forth queer\rgo forth"
+      },
+      {
+        "name": "FUCK THE NOISE",
+        "poem": "fag, you are your own foreteller\rcollapse/\rbecome/\ryour transistors are ticking time to:\rknow your truth\reven if it angers those you are in community with\rcollapse/\rbecome/\rfind your poem piercing out of the frequency &\rhonour it//"
+      },
+      {
+        "name": "REMEMBER WHO YOU ARE",
+        "poem": "you are a sacred gender expansive creature \ryou are meant to \rlive your rage today\rbut don’t let it consume you\rfeel your fear\rbut don’t let it frighten you\ryou are as terrifyingly powerful as you have feared\rawaken to your transness\rawaken to your magic\rand let the current non-you, intro, version of “you” die\r"
+      },
+      {
+        "name": "REBIRTH",
+        "poem": "perhaps it's time to rename yourself (again)\rrename yourself (again)\rperhaps it's time to start (again)\ronly the ego wants to control\rsurrender/ all to love\r& follow only your joy/ for at least all of today\rlet your body & your cells\rcompletely regenerate//"
+      },
+      {
+        "name": "TAKE IT EASY/EASIER",
+        "poem": "delete Google Calendar\rinstall something in between Grindr & Lex, Gex\rswipe with no desire or deadlines\ryou got no dates (but your own time you can streeeeetttchh)\r& that’s dicky, dykey, delicious!\rdream on your own timeline//\rall will come to you but for today:\rhow can you make, the sun, move for you?\r(even easier, than that, baby queer?)\rbask in the cracked window\rlet yourself \rrelease control\r& take it\r(slow)"
+      },
+      {
+        "name": "DEEP REST",
+        "poem": "the hustle & the hurt & the heavens are calling you to rest\rLITERALLY. RIGHT *NOW*:  have a seat & stop performing\rlay down & watch your\rreality TV with no guilt & only pleasure, bed time, slumber, delicious,\rcradle, cuddle, kiss,treat, spa, cold plunge, tea, poem & \rtell only the ones you love the most where you are: \rSAFE (despite how you have felt)\rPROTECTED\rfind yourself renewed \rexactly as your spirit needs \rit is here for you:\rNOW"
+      },
+      {
+        "name": "BECOMING",
+        "poem": "a cruel timer \ralways waiting for the juggler box of fuckery\ryou are the most impatient person\rin every room you are in\rready for the confetti cannon\rhoping for it to be now already\rthe Big Stage\rthe Big Love\rthe 5’4 Blessing to finally hold you like a blessing back well:\rplay this city inside out \runtil the ground begs for you back \runtil your soon is the crash & breath of now\runtil your alarm clock chest goes off with trombones & orgasms & you\rfinally realize, you are  are always\rin the painful (beautiful) dance of becoming"
+      },
+      {
+        "name": "YOU ARE GOD",
+        "poem": "Abracadabra is Hebrew for as I speak I create\ryou manifest through\rhow you poet (dear queer)\rlet your words\rturn this world inside out!\rlet yourself sonnet to the sky\r& even if you lie to yourself that no one hears you\ryour word is now\rour command \rso tell us, & do\rnot \rdare\rTo dream as Big as Heaven herself\ryou are worthy of it all divine re-fracta"
+      },
+      {
+        "name": "VIOLENCE IS NOT LOVE",
+        "poem": "you are worthy of love. safety is your birthright. you will feel safe again. you will feel in love again. dance in the heavens with your loved one. cuddling easy. yes you are loved. yes that smell is so good. yes that hot ocean tub is good. don’t cautiously tip your toe in, submerge & feel the relief. yes you are worthy. no it was not your fault. no you are not to be blamed. no you will be ok again. yes you will smell something that tastes delicious & have a memory of love. yes that pizza on uber eats is discounted for you exactly as you like it. yes that delicious fruit is yours to envelope. yes you have witnessed so much, & yes the past is another planet. yes you will be ok again. & one day, when you separate abuse & love as bountifully as you can– all that is too big to carry will vanish, until only love remains. yes, trauma bodies close together created something too painful for you to hold. yes it is possible to love you, baby queer. in fact it is happening already. we are sorry for the hard hands that have dug themselves into you, you are sorry for the yelling, we are sorry for the way that now you shake- but here, let us hold you. let us carry you forth. you don’t have to be anything else anymore, we are sorry for making you feel that you needed to be. we will cover your grocery bill. we will cover your rent. we will drive you where you need to go. just create & cry. weep & wring out your body. you are heavy in this reaping, but relax into the water. the water will hold you. no more proving. we promise you are loved every time you show up, ready to shed the layers. we promise you will be held by your beloved & you will make your way through. forgive us when the scripts of crisis we inherited repurposed themselves in our mouth. forgive us when we have played the cast of me. forgive me. leave. we will meet again when we are ready, we promise. in this lifetime or in another one, this will not repeat again, we promise."
+      },
+      {
+        "name": "GRIEF",
+        "poem": "there is too much grief in this sky \rfor you to carry \rdear one \rlet me hold you in your loss let me hold you in your missing let me hold\ryou let me hold yo"
+      },
+      {
+        "name": "TESTOSTERONE",
+        "poem": "a call to a weekly ritual\rsacrifice offering return to self\rthe practice of\rre-becoming\rwill you, trust us, to inject you (again)?"
+      },
+      {
+        "name": "THE FEMININE MASCULINE BALANCE",
+        "poem": "they say the right is masculine & the left feminine & so dance with us in the middle tiptoe until you release the expectations prescriptions & names you called yourself \rthey have been planned for obsolescence anyways\rshow us queer how all parts of you will balance upon reading this message\rfeel the incantation of your cells, chemicals, hormones, harmonics, hurts,happily, \rhungirly homosexually, huffing out - Hard. dance: AWOOOOOOOOF. \ryou are now upgraded on all levels of frequency"
+      },
+      {
+        "name": "HORMONES/HARMONICS",
+        "poem": "a part of you may have been out of balance recently\rbut you are meant to be free\rbliss breath beckoning butter the \rqueer euphorics harmonics of\rthe present & \ryes the heartbreak has led you\rto question yourself, your reality, god, the hands, the car, the imprint butlet us tell you, baby queer– you\rknow the newness of your death\ryou are musical, delicious, cradled, created, so sway to the music, danceuntil you forget how to be anxious, & pay attention to the cycles & seasonsof you, blooming out of the scarecrows, the rawest element of you, awakened,trust in this, graciously notice– all of yous, in time, you will  release,renew, rebalance but for nowmove to the dips & the valleys \rof your fe/male womb - the pain, the crucible of suffering, unseeded, thegnaw of dis/ease, the vehement undercurrent \rreintegrate & mourn through"
+      },
+      {
+        "name": "SEEKING UNION",
+        "poem": "if you love someone tell them then rebirth yourself as your own androgynous being of divine liquid healing"
+      },
+      {
+        "name": "MANIFEST COMMUNITY & QUEERS",
+        "poem": "have you been lonely, dear queer? fear not, this oracle comes to remind you that those that are seeking you are also seeking you\rsend a message to who you have in your orbit & water the plants that you do see in front of you, even if they feel few or not good enough or too far away or the wrong timeline or you want more, just water, in gratitude, water in love, & trust that the unfolding of your path & your people, wait, with every thank you, with every little open mic, with every new friend, we have not forgotten about you, we will never forget you, & in fact you are integral, intrinsic, within & without"
+      },
+      {
+        "name": "SLUT PROPHET",
+        "poem": "there are many like you who dance in the heavens \rcall upon: Mary Magdalene, ISIS, Shekinah, Lakapati, & drizzle yourself inFuck Water Lube, athletic leather, a brief harness & dance in the male wombhealing ritual- dance in the fe/male re/becoming of you: \rrecount an erotic use of your love,  as magical as the mother of sun"
+      },
+      {
+        "name": "BLOOD OF THE SILENT LAMB",
+        "poem": "no christ consciousness or transphobic re-action will come for you. no father wound proofed for the past. no angry venom trying to blame you for its downfalls. just grab the carcass of the wolves & hunt the hungry. don’t be nice. you’re a cunt. shed your skin & let no one else wear it, rip their capital greed out of their hands. if they want to contain you in an HR meeting or call you sensitive, come back with the medicine of the many wo/men who menstruated directly into the mud. rot, release, & replenish. you are irreversibly trans. you are irreplaceable meat-eating placenta chunks dripping out of your cheeks, feet planted on the base of a mountain, hair wolved in its plasma cremation, gruel out the weeping, wring out, mortify, retaliate son of chiron–  repent repent repent repent"
+      },
+      {
+        "name": "HARD JUSTICE",
+        "poem": "JUSTICE WILL BE SERVED TO YOU AT ALL COSTS. STAY MILITANT. NO HYPERVIGILANCE REQUIRED. THE VITRIOL IS A VOLATILE MUSCLE OF MACHETE. JUSTICE WILL COME FOR YOU, BUT WHEN THEY COME FOR YOU,, THEY’LL COME HOT HEAVY. HOWL PARADE MARCH IT’S COMING. AN ANGELIC ARMY OUT TO PROTECT YOU. NO ONE WILL OFFSET YOU. NO ONE WILL OFFSET YOU."
+      },
+      {
+        "name": "BLUE TOOTH BUTCH CARE",
+        "poem": "deep in the wet matrix your ancestors: impatient your queerness: ancient ready to awaken a planet of latex & god damn they are proud of you they raised you with daddy issues now you listen to boys moan on your Bluetooth"
+      },
+      {
+        "name": "ESTROGEN",
+        "poem": "inject with care & tenderness & let the unbreakable \rholy\rof HRT\rshow you \rwhat we already know: you are made\rin Divine Light &\rre/created in\rDivine Light"
+      },
+      {
+        "name": "WE WILL ALWAYS BE YOUR MOTHER",
+        "poem": "family chosen by–unconditional–necessity\rlove us as deep as blood mother"
+      },
+      {
+        "name": "DADDY WOUND REVERSE",
+        "poem": "give in father sky\rcherish/protect: Angelic/unt\rhanding out poems/weapons: overflowing/empty handed \rgive out safety"
+      },
+      {
+        "name": "REVERSE COWBOY BLUES/ FORGOTTEN CODE",
+        "poem": "babies of forgotten code. the trans bodies        empires left behind because we didn’t come from a particular place at all. what pulls us to you seems to have happened under you. your records. the encyclopedia in your spine. whatever lifetime lives beneath your breath.        the random recesses between all that we could be, are, is, weeps, rests:     its tired grammar      space. programmed to be divinely in   correct, & endlessly rebirthing. we ask you to sleep. sleep, our  love. dream, dream our  love. our nervous system processing being here among all old terror begging for this love’s eradication. among all violent interference the golden glamor of this mathematic      gap between our two bodies soars beyond all systemic attempts to keep us dead-locked. getting closer & closer together, to the g o l d e n, I, only fearing the       ease of it all, relieve our  own terror         from our  back into your hands. so much so, we do not have to calculate in which position our  body is most heavenly. we no longer      fuck on petri dishes. or memorize what we want to say for ratios to      grow at a socially acceptable pace.  the wet space between us exhales   accidentally   beautifully  defiant        we let go of all the spreadsheets, defences, & watch whatever super chemical reaction unfolds, as natural as trans life itself.      dear god god god  we give in to this golden malfunction    we memorize the formula for miracles miracles miracles struct {miracles   (errors) (failures_) (f_aults) (bools); (fail); (fail);   break    downs   we let this love happen again & (again); and( again);  (again); again___again & ooh it feels so good right there    air}"
+      },
+      {
+        "name": "YOU WILL BE OK/ A DIVINE GLITCH",
+        "poem": "you are our  baby’s baby’s baby’s baby’ baby’s baby’s baby baby baby baby mother mother mother mother mother mother-father You are as safe as an equation. Divine Inner Child Baby  you are the unwound sand.  the snow falls perfectly on us in the hot ocean (tub). you are begging for cuddles. return to bring you closer closer closer closer close; CLOSE CLOSE CLOSE. geometric series of close,  never quite exactly perfectly of each other    always   slightly off      but you are safely getting almost almost almost                          dear god god god god god        god           our  perfect            perfect perfect \rglitch\r[the system was not built for you: but the system is not OK, & you our love, are divine]"
+      },
+      {
+        "name": "FEAR & FAITH",
+        "poem": "this has left you[Empty Handed]. \collapsing. \rbegging those who don’t know [God] / courage \rlike we do, split open [Graceless] \handing out \rlanguage [For Angels] /for our self. \rpeople ask [girl?] \ways of inhaling who are you? [We Answer] /quietpatience… & Fag, You are our  own [Ancestor] \god \rforteller [Let Some Things Go] \collapse, become / ask trans people to call,us [Always] /Kin You are [Mothering] /without gender holding our  child \[Cunt] /in our  palm. like it means [Safety] /joy \rGod. still. holds us & You are [Sobbing] /a diaphragm of relief teeth[Ugly] /hearing our self rotting. [Mourning] /seeking refuge You are[SCREAMING] /in defense of a trans future worth living here to show [Your Trans-Gender] /all our  wounds & heaving our  cut up[Faggot] /family \rfear. birthing us [In Faith] /in gathering in unnamed [Grief] /this crowdedbloodright [Alone] /protected "
+      },
+      {
+        "name": "QUEEN-KING CROWN",
+        "poem": "you are meant to be regal \rlet the gowns designed for gods envelope you & the most beautiful gems beplaced on your head\ryou are worthy of coronation\rthe jewels of your ancient magic shine:let this oracle let you know, it is coming for you, soon\r"
+      },
+      {
+        "name": "LET IT GO",
+        "poem": "that-karma-that-loss-that-grief-that-pain-body-that-neck-pain-that-shoulder-ache-that-lower-back-that-pulling-that-screaming-that-aching-that-pulsing-that-pushing-that-trying-that-surviving-that-desperate-that-what if you let go? we promise you will end up \rOK-you-will-not-die-you-will-come-back-safely-let-grace-wrap-their-blanket-around-you-and-sacrifice-your-suffering-crucible\ran immediate exchange as you say\ri can no longer control this outcome"
+      },
+      {
+        "name": "YOUR PAIN IS SACRED",
+        "poem": "you have been suffering for too long, sweet one. release all shame to the Beloved. bare no longer the fruits of grief they have crushed into you. instead. Dance. in that juice soak in the heavens - gasp at the altar & surrender the beckoning breath only into sensual submission \revaporate, steam & fall down again, we will hold you, in all of yourbreaking creation"
+      },
+      {
+        "name": "FORGIVE HIM",
+        "poem": "repeat as hymnsi)\rI’m sorry please forgive us I’m sorry please forgive us I’m sorry pleaseforgive us I’m sorry please forgive us I’m sorry please forgive us I’m sorryplease forgive us I’m sorry please forgive us I’m sorry\riii)\rThank you, we love you, we love you, we love you, we love you, Thank you"
+      },
+      {
+        "name": "DIVINE FE/MALE  SAUNA",
+        "poem": "in this afterlife of possibility/ your pronouns/ are always your pronouns/ your gender/ is always your gender/ & your trust is always your  trust/ & damn we do trust / \rthe sound of forests bundled up/ the steam of eucalyptus/ twigs cuddlingeach other at all costs/ like faggots do/ making sparks/// heat/ ///showingeach other what is within reach/\r[find a bathhouse & get lost there for life]"
+      },
+      {
+        "name": "IS THIS REALLY YOUR FIGHT?",
+        "poem": "sometimes you must move against & if you must retaliate do it with a full water bottle & a pile of poems & your divine light keeping you filled then anchor yourself back to those that want to massage you with kukui oil & then come back home & if the fight is at home then sometimes you must move against & do so with a full water bottle for yourself & if you can’t have a full water bottle today trust tomorrow, trust the call, trust the open, open the people & if you can’t call open the people call open the plants to feed you & hold you & trust & trust & trust that fight will be over soon & you will be heard"
+      },
+      {
+        "name": "ANCESTORS IN YOUR LOWER BACK PAIN",
+        "poem": "god created a space\r	then there was light\rif you look into our atoms \ryou will see that awe is not a metaphor\ras it leaps time \ras you dig into our skin \ras you find the smallest solar systems splitting into infinites\rthe swirls of our eggs repeating themselves\rbirth was a geometer \rnot a ruler\rafter the illumination\rour children will name themselves endlessly, proof, moses, angelic, bucket,stars, jax, seed\rour children will create a new number every time they breathe, they willcreate \ra new definition every time they silhouette the sun they will move withfreedom & the pain of us will\rlaws of physics rupture as we stare at it\rcandles burned the weight of feeling \roff  - so we can digest more deeply\rand all the jew trans kids that were told they would not measure up to theheaviness of their barcodes\rwill take flame to the archives that once reduced their dignity to dustmill\rlibraries will light up until all that is left is only the original source"
+      },
+      {
+        "name": "CORD CUT",
+        "poem": "release every ancient anchor, absolve yourself until there is no salt, swim in the pacific, deboard the survivorship, run on the land free, our hands covered in pearls\rreverse every timeline \rback to before we swallowed our queerest color\rall of our bodies back\rto heaven \rcords implants imprints release \rfrom the ribs that\rspilled \rof millipede that migrated into our sex & our secular\rwash out this deathless state, unshave your legs,\runthread the husband stitched bible andI break the contracts\ryou are unbound"
+      },
+      {
+        "name": "GRANT/ED",
+        "poem": "you have been granted glorious \rthe $$$$$ GREAT DOLLAR SIGN $$$$$  in the sky wants a piece of you\r"
+      },
+      {
+        "name": "STOP WATCHING TV",
+        "poem": "YOU’RE TOO HOT. GO EAT A PLANT BY THE WATER"
+      },
+      {
+        "name": "DISAPPOINT EVERYONE",
+        "poem": "maybe you don’t make it\rto that ultimate cheque\rmaybe you don’t cash cow yourself into the final form\ror become the holy steak on the front page of Google\rmaybe your SEO is struggling to feed itself\ritting everything but deadlines\rdangling a rabbit one meter away\rin hopes of a carrot\rin hopes of a magic trick\rvanished\rpossibility\rbut god damn\rhow two lives touch each other in the right place at the right time\rwith these poems\rhow god works so good but just not in the exact way that we want\rnot in the dollar amount we want not in the kind of praise we want but ourdear poet\rhow this endless resistance resistance resistance resistance\rhow beautiful this metaphor\rsome day crumbles\rand we are met\rwith a mourning\rincapable of measurement\rsurged back to an automatic prayer\rand all the fictions we armbored ourselves with pursuing our ownpossibility\rlike gospel\rgoogle maps direct you to the angelic realm\rbow your head\rreturn to the word\rand success is how many people you disappoint\rloving each other’s sounds\rthe moon whistle for us good\rdamn did we become as ancient as joyful\rsmearing blush on our faces until this wet sky drips\rbask for us\rand we love how you breathe\rour divine failure\rour divine discontent\rour divine yearning\rknowing how desperate the world can change if they would just let it\rour not going anywhere else\rour lap around yourself & return back home\rour you’re here you’re here you’re here\rour spine our back our lungs\rour desperation\rour pursuit\rour courage\rour okay it will be okay, you are okay bb"
+      },
+      {
+        "name": "ACKNOWLEDGE",
+        "poem": "you are worthy you are worthy you are worthy you are worthyyou are worthy \rwe bow down to your tears we bow down to your pain\rwe feel you\rwe love you\rwe hold you\rnow look at yourself gently\rrepeat the words you have been holding back our  love (to yourself, foryourself, speaking to others just a symbol for yourself)\rgo forth, you are doing it \rRight"
+      },
+      {
+        "name": "DESTROY",
+        "poem": "release the anchor \rout of your spine &\runhinge the heavy\ryou carry one thousand life times in your\rback:\rtriggered to touch\rit took you\rwars of begging to be\rroot plant\rspill\rcut\rup\rinnocent\rstomachs\rof blood\rexpose claw\rbrass star-feast\rhunger\rignite your\runliving\rand chosen\rmerciless\rdear god: you baby queer \rare\rproof\rof bullet\ra deathless\rocean\ryou are here to revolutionize, but first\rthe cis/systems will burn\r"
+      },
+      {
+        "name": "MAKE KIN",
+        "poem": "we f i r e their (Rainbow) gun into the r o o f t o p [BANG]\rthe glass ceiling shatters and\rwe are Refraction. | bits of sun hit bits of glass\runtil we are  |. . only Expression released of all [Prisms]\rRainbow fractals hits the white house so deep the sun re-emerges\rR/allies mourn the loss of a ceiling between us\rour  kin celebrate the demolition\radorned in the colours of our queerest dreams, glass shards | | butterslice\rhoney sweet | us  & our  kin bask in the colours like rays of eternalacceptance\rthese are the colours allies cannot n a m e\rthese are the colours allies cannot w i t n e s s\rthese are the colours allies cannot (steal). b e l i E. V. E.\rLike all real rainbows\rUp close, we are truly t r a n s l u s c e n t\rAdam's Atom Geometric Series Split Infinite Power Magic Joy Truth Radiance\rall the colours always within us | a clarity so profound it can only be known\ras colours of a sunset & an ice cream truck\rgod when she rests her eyes | a timeless celebration\rAn ultraviolet\rs p e c t r u m | [we can no longer be burned by their Ultra-Violence]\rso\rsurrendered. s [ p a r s e ]\r| & un - perceivable\rto The Gun's Gaze\rqueering the skyline in an awe so profound & protected like give it to us moon like give it to us moon, like give it to us Sun, Sister, Siblings. a W E "
+      },
+      {
+        "name": "DEMONSTRATE",
+        "poem": "love that is unconditional \rlove that is the truth \rlove that is unconditional\r love that is bulletproof\r"
+      },
+      {
+        "name": "DEVELOP",
+        "poem": "queer borderlines, code &\rbuild with your kin the backbones \rof a structure that will let you revel \rin rhythm anew\r"
+      },
+      {
+        "name": "BUILD AN ALTAR",
+        "poem": "all your proof dying & deathless\rall your defence worn off\rBefore & Al(F?)ter Alters (know) us as\rnot even Orientation or Boy or Small Questions\rnot 100% anything\rjust sand, sparkly rock, fire pit\rlaughter at the Beach not begging to be unboxed... just haven\runshielding herself at dawn    just f       lags pouring into the earth\r(re)calling themselves in their solitude       blood-magic queers & crypticour mystics swollen without pulse.... outside of the death rows of\rmeasurement    all governance  cuntry   re-surged back to the first sandin warm automatic transcestry    our bodies not borrowed sexualarchitecture\rour spirit our only ruler"
+      },
+      {
+        "name": "ONLY LISTEN",
+        "poem": "H i    y  ea  h h a\rsoft like plant breath our  cauliflower     capillaries   questioning &nervous  carve   into our  body    we try to swallow and\rThank you Pease Nods \rwe are hard ripe. pulled out dead at the oot\rno It’s fine! just\rall immobilized tongue & no saliva & ll the home we carve out of all theflowers of us wilt into this living anthology & we still\rdare to seak & \rwe dare to love our  voice & now\rwe  dare to lisen to you\rbe o daringr"
+      },
+      {
+        "name": "SILENCE",
+        "poem": ""
+      },
+      {
+        "name": "CRAVE",
+        "poem": "give into the excess\rgive into the gods \rgive into the reaping \rgive into the gluttony \rgive in baby scratch the itch smell the flowers luxuriate into the lavenderrelief\r"
+      },
+      {
+        "name": "THE PYTHON",
+        "poem": "our python of code un/shieling herself at dawn\rdreaming of working at the speed of heaven & shedding our skin  \rin the afterlife of after/\rafter\ryears of hustle/\rlet us hiss/\rlike the Coded Grand Serpent/\rlet us trust in slither\rlet us move slow & unmechanical\r& trust in formulas\rfor miracles\r& games\r[SCHEME A LITTLE]"
+      },
+      {
+        "name": "THE WHEEL",
+        "poem": "follow up on empty promises\rall you looking back\rgot a lot of grit trapped in our  \rmouth & a tool box\rfor heaven’s past mistakes\rrupture then repair our way but \ri beg to disagree\rthe thought of us\rlasting & building past the break breeze\rhas left me\runfreed\rgripping at straws at classping at\rpast memories\rtrying to make\ra house of huffs\rwell call the wolf\rand bluff like a sheep\rall the hayfalls away\ras soon as you release\rour home of twine\rloose like leaves in our tea\revaporating \r*poof*\rit could be anything\rbut what it is\rwoof\r& how we struggle \rroam our fists magnetized to the other just like our lips our coded switches our many mattresses sleep in many possessions,\rwe dream with so much posession\rlet us show you our magic without you demanding every drop \rlet us show you our inner workings but don't get caught in the logistics (this time)\r[SPIN AGAIN]"
+      },
+      {
+        "name": "THE WATER",
+        "poem": "make our beds\rweep our bodies \rwring ourselves out like towels\rempty & \rhumid & shiny       night stars\r                  spilling open what we thought we would become\rwater ourselves into birds \rgrow old towards a world\r where there is no \rwhere\rwe\ropen up blisters into\rafter life\r"
+      },
+      {
+        "name": "WILT",
+        "poem": "this grief is stretching with no end. rotting, rotting, rotting, rotting. should we just sit on this couch until we rot? until the fagflower welts? twist in the kitchen trying to capture the sweetest millimeter of sun we once had?  but the way you bring yourself back after death is a commitment that tells us the soil’s got enough for us to be okay from here. even a dead thing finds its way back to the sun right?  a commitment like a flower's mouth yelling- open up open up open up & trust in the water (the water will do what you cannot anyways, love)"
+      }
+
+    ]
+
+    //Button
+    const revealBtn = document.getElementById("reveal");
+    const mainCard = document.getElementById("main_place");
+
+    revealBtn.addEventListener('click', revealCards, false)
+    function revealCards() {
+      mainCard.classList.remove('animate__animated', 'animate__flipInY');
+      const shuffledCards = shuffleCards(cards);
+      const cardContainer = document.getElementById("card-container");
+      const firstCard = shuffledCards[0];
+
+      const cardElement = document.createElement("div");
+      cardElement.innerHTML = `
+      <h2>${firstCard.name}</h2>
+      <pre>${firstCard.poem}</pre>
+    `;
+      // replace div element's contents
+      mainCard.innerHTML = cardElement.innerHTML;
+      setTimeout(() => {
+        mainCard.classList.add('animate__animated', 'animate__flipInY');
+      }, 0)
+      console.log(firstCard);
+    }
+
+    setInterval(() => {
+      revealCards();
+    }, "15000");
+
+    // Function to shuffle the array of cards
+    function shuffleCards(cards) {
+      for (let i = cards.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [cards[i], cards[j]] = [cards[j], cards[i]];
+      }
+      return cards;
+    }
+
+    // Call the shuffleCards function and store the shuffled cards in a new variable
+    // const shuffledCards = shuffleCards(cards);
+
+    // // Get a reference to the card container element
+    // const cardContainer = document.getElementById("card-container");
+
+    // // Get the first card in the shuffled array
+    // const firstCard = shuffledCards[0];
+
+    // // Create an HTML element to display the first card
+    // const cardElement = document.createElement("div");
+    // cardElement.innerHTML = `
+    //   <h2>${firstCard.name}</h2>
+    //   <pre>${firstCard.poem}</pre>
+
+    // `;
+    // cardContainer.appendChild(cardElement);
+
+    // Loop through the shuffled cards array and create HTML elements to display them
+    // shuffledCards.forEach(card => {
+    //   const cardElement = document.createElement("div");
+    //   cardElement.innerHTML = `
+    //     <h2>${card.name}</h2>
+    //   `;
+    //   cardContiner.appendChild(cardElement);
+    // });
+
+  </script>
+
+</body>
+
+</html>

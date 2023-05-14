@@ -1,0 +1,60 @@
+html {
+    background-color: black;
+}
+.navbar-brand {
+    font-family: monospace !important;
+}
+
+.oracle {
+    background-color: #000;
+}
+
+.card.container {
+    max-width: 500px;
+}
+
+.button {
+    text-align: center;
+}
+
+.button button {
+    background: none;
+    border: 1px black solid;
+    color: white;
+}
+
+
+#reveal {
+    color: white;
+    font-family: monospace;
+}
+
+#card-container {
+    height: 75vh; 
+    margin-top: 1em;
+}
+
+#card-container div {
+    height: inherit;
+    padding: 2em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#card-container h2 {
+    color: white;
+}
+
+#card-container pre {
+    color: white;
+    background-color: black;
+    height: 50vh;
+    white-space: pre-wrap;       
+    white-space: -moz-pre-wrap;  
+    white-space: -pre-wrap;      
+    white-space: -o-pre-wrap;    
+    word-break: normal;
+    padding: 2vh 0 1em;
+    overflow-y: hidden;
+    border: none;
+}

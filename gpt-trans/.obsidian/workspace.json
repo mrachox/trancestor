@@ -1,0 +1,188 @@
+{
+  "main": {
+    "id": "8cc8a449360d39e2",
+    "type": "split",
+    "children": [
+      {
+        "id": "114ff174ac1fcfc4",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "131cd6d2ae441421",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "key.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "551217f224245b1a",
+    "type": "split",
+    "children": [
+      {
+        "id": "b98267d7a5cf6037",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "30107827b1e09c34",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "636dc9517080c6d1",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "133b9fde71aca99b",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "16c4f125670cc250",
+    "type": "split",
+    "children": [
+      {
+        "id": "99ec1328b2fbb38b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "0bb133253d36a402",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "key.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "c5a1836869b748e4",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "key.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "f878ee75600c74a4",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "e634c5fa8eb4265c",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "key.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "131cd6d2ae441421",
+  "lastOpenFiles": [
+    "gpt-trans/data/un [naming] _ trans (after Golden).txt",
+    "gpt-trans/data/WALKING HOME ON THE BRINK OF STOMACH-BUTTER FLIGHT.txt",
+    "gpt-trans/data/Trans Scripts of Crisis.txt",
+    "gpt-trans/data/Oracles.md",
+    "gpt-trans/data/Oh Romeo, Romeo, where at tho - Romeo’s Romantic Revolution for our Homosexual Revolt.txt",
+    "gpt-trans/data/NECESSARY GLITCH.txt",
+    "gpt-trans/data/INTERNET IMMORTAL.txt",
+    "gpt-trans/data/24 millienia where there is no .txt",
+    "gpt-trans/data",
+    "data/Oracles.md",
+    "data/WALKING HOME ON THE BRINK OF STOMACH-BUTTER FLIGHT.txt",
+    "data/un [naming] _ trans (after Golden).txt",
+    "data/Trans Scripts of Crisis.txt",
+    "gpt-trans/data/van Dijk - The digital divide.md",
+    "gpt-trans/data/Viveiros de Castro - Perspectival anthropology and the method of controlled equivocation.md",
+    "gpt-trans/data/Tuck and Yang - Decolonization is not a metaphor.md",
+    "gpt-trans/data/Terranova - Network culture.md",
+    "gpt-trans/data/Srnicek - Platform capitalism.md",
+    "gpt-trans/data/Spivak - Can the subaltern speak?.md",
+    "gpt-trans/data/Simondon - The limits of human progress.md",
+    "gpt-trans/data/Silverman - Terms of service.md",
+    "gpt-trans/data/Sandowski - When data is capital.md",
+    "gpt-trans/data/Sampson - A sleepwalkers guide to social media.md",
+    "gpt-trans/data/Said - Orientalism.md",
+    "gpt-trans/data/SSHRC APP 2022 to pull from.md",
+    "gpt-trans/data/Puar - Terrorist assemblages.md",
+    "gpt-trans/data/Porter - The rise of statistical thinking.md",
+    "gpt-trans/data/Noble - Algorithms of oppression.md",
+    "gpt-trans/data/Murphy - The economization of life.md",
+    "gpt-trans/data/Moore - Capitalism in the web of life.md",
+    "gpt-trans/data/McLuhan - Understanding media.md",
+    "gpt-trans/data/McKittrick - Dear science and other stories.md",
+    "gpt-trans/data/Marjanovic Cecez-Kecmanovic Vidgen - Theorising algorithmic justice.md",
+    "gpt-trans/data/Manovich - The language of new media.md",
+    "gpt-trans/data/Mann - Left to other peoples devices.md",
+    "gpt-trans/data/Lowe - The intimacies of four continents.md"
+  ]
+}
